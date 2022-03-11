@@ -1,0 +1,8 @@
+
+hadoop fs -copyFromLocal /home/cloudera/Desktop/Facebook/asruserinput.txt
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -mapper /home/cloudera/Desktop/Facebook/mapper1a.py -reducer /home/cloudera/Desktop/Facebook/reducer1a.py -input asruserinput.txt -output /user/cloudera/asroutput/*
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -mapper /home/cloudera/Desktop/Facebook/mapper2b.py -reducer /home/cloudera/Desktop/Facebook/reducer2b.py -input /user/cloudera/asroutput/*/part-00000 -output /user/cloudera/asroutput1/**
+
+hadoop fs -copyToLocal /user/cloudera/asroutput1/**
