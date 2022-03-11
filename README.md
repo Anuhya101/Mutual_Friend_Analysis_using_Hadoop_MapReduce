@@ -33,14 +33,14 @@ was not friends with each other.
 
 Module-3: Mapper-2
 
-• The second mapper takes this output and slightly changes it:
+● The second mapper takes this output and slightly changes it:
 “f1 tab f2 numMutualFriends” and
 “f2 tab f1 numMutualFriends”
 
-• Hadoop streamer orders these outputs by keys and sends them as inputs for the second
+● Hadoop streamer orders these outputs by keys and sends them as inputs for the second
 reducer
 
-• Input is ordered by user:
+● Input is ordered by user:
 (user1 tab friend1, numMutualFriends)
 (user1 tab friend2, numMutualFriends) …..
 (user 2 tab friend1…)
