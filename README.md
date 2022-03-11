@@ -6,7 +6,7 @@ connected to each other. Let’s assume that the friendships are undirected: if 
 B is also a friend of A. This is the most common friendship system used in Facebook, Google+,
 Linkedin, and several social networks.
 
-###Module-1: Mapper-1
+### Module-1: Mapper-1
 
 The map script splits data into words. Its output contains the word and 1 as its value. These tuples
 become the input of a reducer that sums the word count. The first mapper takes each row and
@@ -21,7 +21,7 @@ a 0 to the pair.
 larger than the first friend in the form “friend1, friend2, 1”.
 
 
-###Module-2: Reducer-1
+### Module-2: Reducer-1
 
 The Mapper creates pairs of the first letter of each word with a 1. The Reducer counts the number of
 words having the same first letter. The first reducer orders and groups keys by value, and lists all
@@ -31,7 +31,7 @@ was not friends with each other.
 
 <img width="493" alt="Screenshot 2022-02-03 at 12 17 16 AM" src="https://user-images.githubusercontent.com/78052106/152218198-2b544a19-1935-42ab-8d9b-b4e3412ac5ea.png">
 
-###Module-3: Mapper-2
+### Module-3: Mapper-2
 
 ● The second mapper takes this output and slightly changes it:
 “f1 tab f2 numMutualFriends” and
@@ -46,7 +46,7 @@ reducer
 (user 2 tab friend1…)
 
 
-###Module-4: Reducer-2
+### Module-4: Reducer-2
 
 ● The second reducer picks the top ten potential friends for each user
 
